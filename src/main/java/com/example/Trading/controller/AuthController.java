@@ -17,17 +17,17 @@ public class AuthController {
     @Autowired
     private UserRepository userRepository;
 
-    @PostMapping("/Signup")
-    private ResponseEntity<User> register(@RequestBody User user){
-
-        User newUser = new User();
-        newUser.setEmail(user.getEmail());
-        newUser.setPassword(user.getPassword());
-        newUser.setEmail(User.getEmail());
-        newUser.setFullName(user.getFullName);
-
-        User savedUser = userRepository.save(newUser);
-
-        return new ResponseEntity<>(savedUser, HttpStatus.CREATED);
-    }
+//    @PostMapping("/Signup")
+////    private ResponseEntity<User> register(@RequestBody User user){
+////
+////        User newUser = new User();
+////        newUser.setEmail(user.getEmail());
+////        newUser.setPassword(user.getPassword());
+////        newUser.setEmail(User.getEmail());
+////        newUser.setFullName(user.getFullName);
+////
+////        User savedUser = userRepository.save(newUser);
+////
+////        return new ResponseEntity<>(savedUser, HttpStatus.CREATED);
+////    }
 }
