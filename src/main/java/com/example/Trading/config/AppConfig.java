@@ -16,7 +16,7 @@ public class AppConfig {
                         .requestMatchers("/api**").authenticated().anyRequest().permitAll())
                 .addFilterBefore(new jwtTokenValidator(), BasicAuthenticationFilter.class)
                 .csef(csrf->csrf.disable())
-                .cors(cors->cors.configurationSource(CorsConfigurationSource))
+                .cors(cors->cors.configurationSource(CorsConfigurationSource));
 
         return null;
     }
