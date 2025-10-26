@@ -55,7 +55,7 @@ console.log("---------- ",auth.error)
          <CustomeToast show={auth.error} message={auth.error?.error}/>
      
 
-        <h1 className="text-6xl font-bold pb-9">Zosh Trading</h1>
+        <h1 className="text-6xl font-bold pb-9">TradeWithAi</h1>
         {/* <Avatar>
           <AvatarImage src="https://cdn.pixabay.com/photo/2019/04/15/20/42/bitcoin-4130299_1280.png"/>
           <AvatarFallback>BTC</AvatarFallback>
@@ -75,7 +75,7 @@ console.log("---------- ",auth.error)
                     onClick={() => handleNavigation("/signin")}
                     variant="ghost"
                   >
-                    signin
+                    Signin
                   </Button>
                 </div>
               ) : (
@@ -85,7 +85,7 @@ console.log("---------- ",auth.error)
                     onClick={() => handleNavigation("/signup")}
                     variant="ghost"
                   >
-                    signup
+                    Signup
                   </Button>
                 </div>
               )}
@@ -112,12 +112,12 @@ console.log("---------- ",auth.error)
                   <LoginForm />
 
                   <div className="flex items-center justify-center">
-                    <span>already have account ? </span>
+                    <span>Already have account ? </span>
                     <Button
                       onClick={() => handleNavigation("/signup")}
                       variant="ghost"
                     >
-                      signup
+                      Signup
                     </Button>
                   </div>
                   <div className="">
