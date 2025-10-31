@@ -244,52 +244,12 @@ const Home = () => {
               </Button>
             </div>
 
-            <div className="h-[76%]  flex flex-col overflow-y-auto  gap-5 px-5 py-2 scroll-container">
-            <div
-                 
-                  
-                  className={`${ "self-start"
-                  } pb-5 w-auto`}
-                >
-                  <div className="justify-end self-end px-5 py-2 rounded-md bg-slate-800 w-auto">
-                      {`hi, ${auth.user?.fullName}`}
-                      <p>you can ask crypto related any question</p>
-                      <p>like, price, market cap extra...</p>
-                    </div>
-                  
-                </div>
-              {chatBot.messages.map((item, index) => (
-                <div
-                  ref={chatContainerRef}
-                  key={index}
-                  className={`${
-                    item.role == "user" ? "self-end" : "self-start"
-                  } pb-5 w-auto`}
-                >
-                 
-                  {item.role == "user" ? (
-                    <div className="justify-end self-end px-5 py-2 rounded-full bg-slate-800 w-auto">
-                      {item.prompt}
-                    </div>
-                  ) : (
-                    <div className="w-full">
-                      <div className="bg-slate-700 flex gap-2 py-4 px-4 rounded-md min-w-[15rem] w-full">
-                        <p className="">{item.ans}</p>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ))}
-              {chatBot.loading && <p>fetchin data...</p>}
-            </div>
-
-            <div className="h-[12%] border-t">
-              <Input
-                className="w-full h-full border-none outline-none"
-                placeholder="write prompt"
-                onChange={handleChange}
-                value={inputValue}
-                onKeyPress={handleKeyPress}
+            <div className="h-[88%] flex flex-col px-0 py-0">
+              <iframe
+                title="external-app"
+                src="http://localhost:3000/"
+                className="w-full h-full rounded-md bg-slate-800"
+                style={{ border: "none" }}
               />
             </div>
           </div>
