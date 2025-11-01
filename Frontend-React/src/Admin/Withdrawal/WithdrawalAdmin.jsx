@@ -45,46 +45,45 @@ const WithdrawalAdmin = () => {
     <div className="px-20 ">
       <h1 className="text-3xl font-bold py-10">All Withdrawal Requests</h1>
       <div>
-        
-          <Table>
-            <TableHeader>
-              <TableRow>
-                
-                <TableHead className="py-5">Date</TableHead>
-                <TableHead className="py-5">User</TableHead>
-                <TableHead>Method</TableHead>
-                <TableHead>Amount</TableHead>
-                <TableHead className="text-right">Status</TableHead>
-                <TableHead className="text-right">Procced</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {withdrawal.requests.map((item) => (
-                <TableRow key={item.id}>
-                  <TableCell className="font-medium py-5">
-                    {readableTimestamp(item?.date)}
-                  </TableCell>
-                  <TableCell>
-                    <p className="font-bold">{item.user.fullName}</p>
-                    <p className="text-gray-300">{item.user.email}</p>
-                  </TableCell>
-                  <TableCell>{"Bank Account"}</TableCell>
-                  <TableCell className="text-green-500">{item.amount} USD</TableCell>
-                  <TableCell className="text-right">
-                    <Badge
-                      className={`text-white ${
-                        item.status == "PENDING"
-                          ? "bg-red-500 "
-                          : "bg-green-500"
+
+        <Table>
+          <TableHeader>
+            <TableRow>
+
+              <TableHead className="py-5">Date</TableHead>
+              <TableHead className="py-5">User</TableHead>
+              <TableHead>Method</TableHead>
+              <TableHead>Amount</TableHead>
+              <TableHead className="text-right">Status</TableHead>
+              <TableHead className="text-right">Procced</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {withdrawal.requests.map((item) => (
+              <TableRow key={item.id}>
+                <TableCell className="font-medium py-5">
+                  {readableTimestamp(item?.date)}
+                </TableCell>
+                <TableCell>
+                  <p className="font-bold">{item.user.fullName}</p>
+                  <p className="text-gray-300">{item.user.email}</p>
+                </TableCell>
+                <TableCell>{"Bank Account"}</TableCell>
+                <TableCell className="text-green-500">{item.amount} USD</TableCell>
+                <TableCell className="text-right">
+                  <Badge
+                    className={`text-white ${item.status == "PENDING"
+                        ? "bg-red-500 "
+                        : "bg-green-500"
                       }
                    `}
-                    >
-                      {item.status}
-                    </Badge>
-                  </TableCell>
-                  <TableCell className="text-right">
+                  >
+                    {item.status}
+                  </Badge>
+                </TableCell>
+                <TableCell className="text-right">
                   <DropdownMenu>
-                       <DropdownMenuTrigger className=" outline-none ">
+                    <DropdownMenuTrigger className=" outline-none ">
                       <Button variant="outline">PROCCED</Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
@@ -108,13 +107,13 @@ const WithdrawalAdmin = () => {
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
-                 
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-       
+
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+
       </div>
     </div>
   );

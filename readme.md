@@ -1,7 +1,8 @@
-# 💹 TradeWithAI — AI-Powered Crypto Trading & Portfolio Platform
+# 💹 TradeWithAI — AI-Powered Crypto Trading
 
 An intelligent crypto trading and management platform built using **Spring Boot**, **React**, and **Tailwind CSS** — integrating **Gemini API** and **CoinGecko API** for real-time market data.  
 It provides users with a seamless experience to **buy, sell, track, and manage cryptocurrencies** securely.
+
 
 ---
 
@@ -75,7 +76,7 @@ It provides users with a seamless experience to **buy, sell, track, and manage c
 ## 🧠 Architecture Overview
 
 
-## Er Diagram
+<!-- ## Er Diagram
 
 ```
 +---------------------+           +-----------------+
@@ -414,4 +415,6 @@ It provides users with a seamless experience to **buy, sell, track, and manage c
 | user_id           | bigint  |
 | otp               | varchar |
 | verification_type | varchar |
-| send_to           | varchar |
+| send_to           | varchar | -->
+
+
