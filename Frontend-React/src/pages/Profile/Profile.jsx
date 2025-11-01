@@ -40,7 +40,7 @@ const Profile = () => {
                   <p className="w-[9rem]">Email : </p>
                   <p className="text-gray-500">{auth.user?.email} </p>
                 </div>
-                <div className="flex">
+                {/* <div className="flex">
                   <p className="w-[9rem]">Full Name : </p>
                   <p className="text-gray-500">{"code with zosh"} </p>
                 </div>
@@ -61,15 +61,15 @@ const Profile = () => {
                 <div className="flex">
                   <p className="w-[9rem]">City : </p>
                   <p className="text-gray-500">{"mumbai"} </p>
-                </div>
-                <div className="flex">
+                </div> */}
+                {/* <div className="flex">
                   <p className="w-[9rem]">Postcode : </p>
                   <p className="text-gray-500">{345020} </p>
                 </div>
                 <div className="flex">
                   <p className="w-[9rem]">Country : </p>
                   <p className="text-gray-500">{"india"} </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </CardContent>
