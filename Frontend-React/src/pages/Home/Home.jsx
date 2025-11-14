@@ -247,7 +247,7 @@ const Home = () => {
             <div className="h-[88%] flex flex-col px-0 py-0">
               <iframe
                 title="external-app"
-                src="http://localhost:3000/"
+                src="https://chat-bot-eta-beige.vercel.app/"
                 className="w-full h-full rounded-md bg-slate-800"
                 style={{ border: "none" }}
               />
